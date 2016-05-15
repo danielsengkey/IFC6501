@@ -1,4 +1,5 @@
 # ignore generated files
+results/
 .settings/
 *_m.h
 *_m.cc

@@ -40,9 +40,9 @@ network Performance
         configurator: IPv4NetworkConfigurator;
         
     connections:
-        switch.ethg++ <--> ThruputMeteringChannel{ delay=normal(1us,0.1us); datarate = 100 Mbps; thruputDisplayFormat = "#b";} <--> server.ethg++;
+        switch.ethg++ <--> ThruputMeteringChannel{ delay=normal(1ms,0.3ms); datarate = 100 Mbps; thruputDisplayFormat = "#b"; } <--> server.ethg++;
         for i=0..(n-1){
-                client[i].ethg++ <--> ThruputMeteringChannel{ delay=normal(1us,0.1us); datarate = 10 Mbps; thruputDisplayFormat = "#b";} <--> switch.ethg++;
+                client[i].ethg++ <--> ThruputMeteringChannel{ delay=normal(1ms,0.1ms); datarate = 10 Mbps; thruputDisplayFormat = "#b"; } <--> switch.ethg++;
         }
         
 }
